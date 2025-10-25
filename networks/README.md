@@ -14,7 +14,7 @@ Three modes are:
 
 $ docker run --network=bridge <IMAGE-ID>/<IMAGE-NAME>:<IMAGE-TAG>
 
-# to run a container in the host mode. Note: you can't multiple containers that uses the same port in this mode as one of them should lock this port on the host i.e. no containers shall use the same host port
+# to run a container in the host mode. Note: you can't have multiple containers that use the same port in this mode as one of them should lock this port on the host i.e. no containers shall use the same host port
 
 $ docker run --network=host <IMAGE-ID>/<IMAGE-NAME>:<IMAGE-TAG>
 
@@ -24,5 +24,5 @@ $ docker run --network=none <IMAGE-ID>/<IMAGE-NAME>:<IMAGE-TAG>
 
 # you can also get the networking settings from the container using the inspect docker subcommand which lists the core details of any container
 
-$ docker inspect <CONTAINER-ID>/<CONTAINER-NAME>
+$ docker inspect <CONTAINER-ID>/<CONTAINER-NAME> | grep -i Network
 ```

@@ -1,9 +1,10 @@
 ## Containers
 
 Running instance of the docker images i.e. it is the instance/object we create from the Class in the OOP.
+
 **Write-On-Copy:** where docker builds a write layer upon the already existing read-only image layers.
 
-The data written/updated on the container will no longer exist when the container will be destroyed i.e. containers are **ephemeral**. However, the data changes still exist even if you stopped and restarted a container.
+The data written/updated on the container will no longer exist when the container will be destroyed i.e. containers are **ephemeral**. However, the data changes still exist even if you stopped and restarted a container i.e. as long as the container is still alive not killed/removed, the changes will still exist.
 
 ## Core Related Commands
 
@@ -28,11 +29,11 @@ $ docker run -it <IMAGE-ID>/<IMAGE-NAME>:<IMAGE-TAG> /bin/bash
 
 $ docker ps
 
-# to list the current running containers IDs only
+# to list the current running containers' IDs only
 
 $ docker ps -q
 
-# to list the current all the containers either stopped or running
+# to list the current containers either stopped or running
 
 $ docker ps -a
 
@@ -47,4 +48,8 @@ $ docker rm <CONTAINER-ID>/<CONTAINER-NAME>
 # to restart an existing stopped container
 
 $ docker restart <CONTAINER-ID>/<CONTAINER-NAME> 
+
+# to check the container deep details e.g. the networking settings of the container
+
+$ docker inspect <CONTAINER-ID>/<CONTAINER-NAME> 
 ```
