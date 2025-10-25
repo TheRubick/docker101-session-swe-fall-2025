@@ -19,7 +19,11 @@ $ docker run <IMAGE-ID>/<IMAGE-NAME>:<IMAGE-TAG> <COMMAND>
 
 # to run a container in the detach mode i.e. run container in the background
 
-$ docker run -d <IMAGE-ID>/<IMAGE-NAME>:<IMAGE-TAG> <COMMAND>
+$ docker run -d <IMAGE-ID>/<IMAGE-NAME>:<IMAGE-TAG>
+
+# to run a container with a specific name
+
+$ docker run --name <NAME> <IMAGE-ID>/<IMAGE-NAME>:<IMAGE-TAG>
 
 # to run a container with interactive shell i.e. jump into inside the container
 
